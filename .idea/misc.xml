@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Wizeline/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/Wizeline/wizeline project/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Wizeline/wizeline project/app/src/main/res/layout/fragment_detail_crypto.xml" value="0.253125" />
+        <entry key="..\:/Wizeline/wizeline project/app/src/main/res/layout/fragment_resume_crypto.xml" value="0.25416666666666665" />
+        <entry key="..\:/Wizeline/wizeline project/app/src/main/res/layout/fragment_resumen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Wizeline/wizeline project/app/src/main/res/layout/item_crypto.xml" value="0.4" />
       </map>
     </option>
   </component>

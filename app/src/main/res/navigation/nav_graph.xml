@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/resumeCryptoFragment">
+
+    <fragment
+        android:id="@+id/resumeCryptoFragment"
+        android:name="com.example.projectwizeline.app.presentation.ResumeCryptoFragment"
+        android:label="ResumeCryptoFragment" />
+    <fragment
+        android:id="@+id/detailCryptoFragment"
+        android:name="com.example.projectwizeline.app.presentation.DetailCryptoFragment"
+        android:label="DetailCryptoFragment" />
+</navigation>
