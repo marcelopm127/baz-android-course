@@ -3,14 +3,14 @@ package com.example.projectwizeline.data.api.entity
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class PayloadOrderBook(
+data class PayloadOrderBookDto(
     @SerializedName("asks")
     @Expose
-    val asks: List<AskOrBid>? = emptyList(),
+    val asks: List<AskOrBidDto>? = emptyList(),
 
     @SerializedName("bids")
     @Expose
-    val bids: List<AskOrBid>? = emptyList(),
+    val bids: List<AskOrBidDto>? = emptyList(),
 
     @SerializedName("updated_at")
     @Expose

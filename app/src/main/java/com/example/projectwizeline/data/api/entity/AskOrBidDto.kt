@@ -3,7 +3,7 @@ package com.example.projectwizeline.data.api.entity
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class AskOrBid(
+data class AskOrBidDto(
     @SerializedName("book")
     @Expose
     val idBook: String? = "",

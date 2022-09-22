@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Project Wizeline</string>
+    <string name="crypto">CRYPTO</string>
+    <string name="price">PRECIO (MAX/MIN)</string>
 </resources>

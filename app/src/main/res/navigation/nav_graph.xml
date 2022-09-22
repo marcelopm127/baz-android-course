@@ -7,9 +7,15 @@
     <fragment
         android:id="@+id/resumeCryptoFragment"
         android:name="com.example.projectwizeline.app.presentation.ResumeCryptoFragment"
-        android:label="ResumeCryptoFragment" />
+        android:label="ResumeCryptoFragment" >
+        <action
+            android:id="@+id/action_resumeCryptoFragment_to_detailCryptoFragment"
+            app:destination="@id/detailCryptoFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/detailCryptoFragment"
         android:name="com.example.projectwizeline.app.presentation.DetailCryptoFragment"
         android:label="DetailCryptoFragment" />
+    
 </navigation>
