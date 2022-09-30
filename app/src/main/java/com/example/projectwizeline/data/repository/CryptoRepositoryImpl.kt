@@ -2,18 +2,21 @@ package com.example.projectwizeline.data.repository
 
 import com.example.projectwizeline.data.api.APIService
 import com.example.projectwizeline.data.api.response.OrderBookResponse
+import com.example.projectwizeline.data.api.response.ResumeAvailableBookResponse
 import com.example.projectwizeline.data.api.response.TickerResponse
 import com.example.projectwizeline.domain.constant.Constants
-import com.example.projectwizeline.domain.entity.ResumeAvailableBook
 import com.example.projectwizeline.domain.repository.CryptoRepository
 import com.example.projectwizeline.util.Resource
+import io.reactivex.rxjava3.core.Single
 import retrofit2.HttpException
+import retrofit2.Response
 import java.io.IOException
+import javax.inject.Inject
 
-class CryptoRepositoryImpl constructor(private val api: APIService): CryptoRepository {
+class CryptoRepositoryImpl @Inject constructor(private val api: APIService): CryptoRepository {
 
-    override fun getResumeAvailableBook(): Resource<List<ResumeAvailableBook>> {
-        TODO("Not yet implemented")
+    override fun getResumeAvailableBook(): Single<Response<ResumeAvailableBookResponse>> {
+        return api.getResumeAvailableBook()
     }
 
     override suspend fun getTicker(book: String?): Resource<TickerResponse> {

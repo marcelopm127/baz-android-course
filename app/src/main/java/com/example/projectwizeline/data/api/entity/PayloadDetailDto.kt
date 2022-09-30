@@ -8,10 +8,6 @@ data class PayloadDetailDto(
     @Expose
     val idBook: String? = "",
 
-    @SerializedName("volume")
-    @Expose
-    val volume: String? = "",
-
     @SerializedName("high")
     @Expose
     val high: String? = "",
@@ -22,21 +18,5 @@ data class PayloadDetailDto(
 
     @SerializedName("low")
     @Expose
-    val low: String? = "",
-
-    @SerializedName("vwap")
-    @Expose
-    val vwap: String? = "",
-
-    @SerializedName("ask")
-    @Expose
-    val ask: String? = "",
-
-    @SerializedName("bid")
-    @Expose
-    val bid: String? = "",
-
-    @SerializedName("created_at")
-    @Expose
-    val createdAt: String? = ""
+    val low: String? = ""
 )

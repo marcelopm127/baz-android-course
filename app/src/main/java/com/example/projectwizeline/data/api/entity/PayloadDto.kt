@@ -8,27 +8,11 @@ data class PayloadDto(
     @Expose
     val idBook: String? = "",
 
-    @SerializedName("minimum_amount")
-    @Expose
-    val minimumAmount: String? = "",
-
-    @SerializedName("maximum_amount")
-    @Expose
-    val maximumAmount: String? = "",
-
     @SerializedName("minimum_price")
     @Expose
     val minimumPrice: String? = "",
 
     @SerializedName("maximum_price")
     @Expose
-    val maximumPrice: String? = "",
-
-    @SerializedName("minimum_value")
-    @Expose
-    val minimumValue: String? = "",
-
-    @SerializedName("maximum_value")
-    @Expose
-    val maximumValue: String? = ""
+    val maximumPrice: String? = ""
 )

@@ -2,4 +2,13 @@
     <string name="app_name">Project Wizeline</string>
     <string name="crypto">CRYPTO</string>
     <string name="price">PRECIO (MAX/MIN)</string>
+    <string name="loading">Cargando…</string>
+    <string name="empty_data">No se encontraron datos</string>
+    <string name="last_price">Último precio</string>
+    <string name="more_high">Precio más alto</string>
+    <string name="more_low">Precio más bajo</string>
+    <string name="type">Tipo:</string>
+    <string name="crypto_name">Crypto:</string>
+    <string name="price_name">Precio:</string>
+    <string name="amount">Monto:</string>
 </resources>

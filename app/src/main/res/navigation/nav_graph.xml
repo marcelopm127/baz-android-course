@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/resumeCryptoFragment"
-        android:name="com.example.projectwizeline.app.presentation.ResumeCryptoFragment"
+        android:name="com.example.projectwizeline.app.presentation.views.ResumeCryptoFragment"
         android:label="ResumeCryptoFragment" >
         <action
             android:id="@+id/action_resumeCryptoFragment_to_detailCryptoFragment"
@@ -15,7 +15,12 @@
 
     <fragment
         android:id="@+id/detailCryptoFragment"
-        android:name="com.example.projectwizeline.app.presentation.DetailCryptoFragment"
-        android:label="DetailCryptoFragment" />
-    
+        android:name="com.example.projectwizeline.app.presentation.views.DetailCryptoFragment"
+        android:label="DetailCryptoFragment" >
+        <argument
+            android:name="idBook"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
 </navigation>
