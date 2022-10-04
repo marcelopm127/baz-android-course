@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemAskBidTypeContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.5"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemAskBidTypeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemAskBidTypeValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:textColor="@color/dark_gray"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/itemAskBidTypeTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            tools:text="BID"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemAskBidNameContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.5"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintStart_toEndOf="@id/itemAskBidTypeContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemAskBidTypeContainer"
+        app:layout_constraintBottom_toBottomOf="@id/itemAskBidTypeContainer"
+        app:layout_constraintHorizontal_bias="0">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemAskBidNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/crypto_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemAskBidNameValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:textColor="@color/dark_gray"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/itemAskBidNameTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            tools:text="BTC_MXN"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemAskBidPriceContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.5"
+        android:paddingHorizontal="8dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemAskBidTypeContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemAskBidPriceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/price_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemAskBidPriceValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:textColor="@color/dark_gray"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/itemAskBidPriceTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            tools:text="$4000 MXN"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemAskBidAmountContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.5"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintStart_toEndOf="@id/itemAskBidPriceContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemAskBidPriceContainer"
+        app:layout_constraintBottom_toBottomOf="@id/itemAskBidPriceContainer"
+        app:layout_constraintHorizontal_bias="0">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemAskBidAmountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemAskBidAmountValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:textColor="@color/dark_gray"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/itemAskBidAmountTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            tools:text="0.14523"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemAskBidPriceContainer"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

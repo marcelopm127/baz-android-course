@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/resumeCryptoFragment">
+
+    <fragment
+        android:id="@+id/resumeCryptoFragment"
+        android:name="com.example.projectwizeline.app.presentation.views.ResumeCryptoFragment"
+        android:label="ResumeCryptoFragment" >
+        <action
+            android:id="@+id/action_resumeCryptoFragment_to_detailCryptoFragment"
+            app:destination="@id/detailCryptoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailCryptoFragment"
+        android:name="com.example.projectwizeline.app.presentation.views.DetailCryptoFragment"
+        android:label="DetailCryptoFragment" >
+        <argument
+            android:name="idBook"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>
