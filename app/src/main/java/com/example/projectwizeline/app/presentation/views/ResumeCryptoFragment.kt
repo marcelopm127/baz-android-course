@@ -46,7 +46,7 @@ class ResumeCryptoFragment: Fragment() {
             if(resume.payload?.isNotEmpty() == true) {
                 adapter.submitList(resume.payload)
             } else {
-                Toast.makeText(requireActivity(), resources.getText(R.string.empty_data), Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), resources.getText(R.string.empty_data), Toast.LENGTH_SHORT).show()
             }
         }
     }

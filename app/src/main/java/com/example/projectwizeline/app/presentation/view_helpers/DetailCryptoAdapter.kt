@@ -1,8 +1,8 @@
 package com.example.projectwizeline.app.presentation.view_helpers
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -25,17 +25,17 @@ class DetailCryptoAdapter: ListAdapter<AskOrBid, DetailCryptoAdapter.ViewHolder>
 
     inner class ViewHolder(private val binding: ItemAskBidBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(book: AskOrBid) {
-            if(book.type == Constants.ASK) {
-                binding.root.setBackgroundColor(binding.root.context.resources.getColor(R.color.background_ask, null))
-            } else {
-                binding.root.setBackgroundColor(binding.root.context.resources.getColor(R.color.background_bid, null))
-            }
-            binding.itemAskBidTypeValue.text = book.type
-            binding.itemAskBidNameValue.text = book.idBook
-            binding.itemAskBidPriceValue.text = book.price?.toFormatCurrency()
-            binding.itemAskBidAmountValue.text = book.amount.toString()
-            if(layoutPosition == itemCount-1) {
-                binding.line.visibility = View.GONE
+            with(binding) {
+                if(book.type == Constants.ASK) {
+                    root.setBackgroundColor(root.context.resources.getColor(R.color.background_ask, null))
+                } else {
+                    root.setBackgroundColor(root.context.resources.getColor(R.color.background_bid, null))
+                }
+                itemAskBidTypeValue.text = book.type
+                itemAskBidNameValue.text = book.idBook
+                itemAskBidPriceValue.text = book.price?.toFormatCurrency()
+                itemAskBidAmountValue.text = book.amount.toString()
+                line.isVisible = layoutPosition != itemCount-1
             }
         }
     }

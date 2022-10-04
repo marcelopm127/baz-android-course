@@ -6,6 +6,9 @@ interface Constants {
         const val ASK = "ASK"
         const val BID = "BID"
         const val MXN = "mxn"
+        const val MXN_COMPARE = "_mxn"
+        const val SPACE = ""
+        const val DRAWABLE_TYPE = "drawable"
 
         //errors
         const val ERROR_UNKNOWN = "Error inesperado"
