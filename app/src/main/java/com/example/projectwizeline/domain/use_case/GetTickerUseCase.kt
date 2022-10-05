@@ -6,6 +6,7 @@ import com.example.projectwizeline.domain.repository.CryptoRepository
 import com.example.projectwizeline.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import java.lang.Exception
 import javax.inject.Inject
 
 class GetTickerUseCase @Inject constructor(private val cryptoRepository: CryptoRepository) {
@@ -19,13 +20,20 @@ class GetTickerUseCase @Inject constructor(private val cryptoRepository: CryptoR
         } else {
             val data = response.data
 
-            val ticker = Ticker(
-                payloadDetail = PayloadDetail(
-                    data?.payloadDetailDto?.last?.toDouble() ?: 0.0,
-                    data?.payloadDetailDto?.low?.toDouble() ?: 0.0,
-                    data?.payloadDetailDto?.high?.toDouble() ?: 0.0
-                )
-            )
+            val ticker =
+                try {
+                    Ticker(
+                        payloadDetail = PayloadDetail(
+                            data?.payloadDetailDto?.last?.toDouble() ?: 0.0,
+                            data?.payloadDetailDto?.low?.toDouble() ?: 0.0,
+                            data?.payloadDetailDto?.high?.toDouble() ?: 0.0
+                        )
+                    )
+                } catch (_:Exception){
+                    Ticker(
+                        payloadDetail = PayloadDetail(0.0, 0.0, 0.0)
+                    )
+                }
 
             emit(Resource.Success(data = ticker))
         }
