@@ -35,6 +35,6 @@ class GetResumeAvailableBookUseCaseTest {
         val result = getResumeAvailableBookUseCase()
 
         //THEN
-        Assert.assertEquals(result, mockData)
+        assert(mockData == result)
     }
 }
