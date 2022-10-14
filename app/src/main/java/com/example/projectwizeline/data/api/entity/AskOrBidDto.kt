@@ -3,6 +3,7 @@ package com.example.projectwizeline.data.api.entity
 import com.example.projectwizeline.domain.entity.AskOrBid
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.lang.Exception
 
 data class AskOrBidDto(
     @SerializedName("book")
@@ -18,11 +19,20 @@ data class AskOrBidDto(
     val amount: String? = "",
 ) {
     fun toAskOrBid(type: String): AskOrBid {
-        return AskOrBid(
-            idBook = idBook,
-            price = price?.toDouble(),
-            amount = amount?.toDouble(),
-            type = type
-        )
+        return try {
+            AskOrBid(
+                idBook = idBook,
+                price = price?.toDouble(),
+                amount = amount?.toDouble(),
+                type = type
+            )
+        }catch (_:Exception) {
+            AskOrBid(
+                idBook = idBook,
+                price = 0.0,
+                amount = 0.0,
+                type = type
+            )
+        }
     }
 }

@@ -19,6 +19,7 @@ class GetOrderBooksUseCase @Inject constructor(private val cryptoRepository: Cry
         } else {
             val data = response.data
             val listAskAndBids = mutableListOf<AskOrBid>()
+
             listAskAndBids.addAll(
                 data?.payloadOrderBook?.toPayloadOrderBook()?.asks ?: mutableListOf()
             )
