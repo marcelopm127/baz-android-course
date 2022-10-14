@@ -50,7 +50,7 @@ class DetailCryptoViewModel @Inject constructor(private val getTickerUseCase: Ge
         }
     }
 
-    private fun getOrderBook(idBook: String) {
+    fun getOrderBook(idBook: String) {
         viewModelScope.launch {
             val response = getOrderBooksUseCase.invoke(idBook)
 
